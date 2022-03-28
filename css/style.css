@@ -1,0 +1,82 @@
+﻿body {
+    background-color:#f4f5f4;
+    margin:0px;
+    height: 142px;
+}
+
+#divEnvironment
+ {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    
+}
+
+.title{
+    font-size: 40px;
+    font-family:Lato, Arial, sans-serif;
+    height: 54px;
+}
+
+.image {
+    border:3px solid white;
+}
+span {
+    color:#6C757D;
+}
+.description {
+    color:#212529;
+    font-size:15px;
+}
+.subText {
+    font-size:32px;
+    color:#212529;
+     font-family:Lato, Arial, sans-serif;
+     text-align:center;
+}
+
+#container2 {
+    background-color: #004570;
+ 
+}
+
+h5 {
+    color:white;
+    font-size:20px;
+}
+
+
+TitleText {
+
+    color:red;
+}
+#LoginButtonText {
+    background-color: rgb(0,123,255);
+    color: white;
+    border:solid 2px rgb(0,123,255);
+    border-radius: 5px; 
+    width:150px;
+    margin-left:1250px;
+    height:40px;
+   
+    
+}
+
+.CGU p {
+    color:#212529;
+    font-family:Arial;
+    font-size:16px;
+}
+a {
+    color: #007BFF;
+    text-decoration:none;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.CGU h2 {
+    font-family:Arial;
+    font-size:32px;
+    color:#212529;
+}

@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageConnected.master.cs" Inherits="Connected_MasterPageConnected" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+      <link href="../css/styleConnected.css" rel="stylesheet" />
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+           
+
+        </asp:ContentPlaceHolder>
+        <div style="margin-top:-451px;">
+            <div style="height:100%; width:186px; background-color:#004E86;">
+            <img src="../images/imagesAutres/logo.png"  style="height: 100px; width:100px; margin-left:30px;"/>
+            <img src="../images/imagesAutres/dashboard.PNG" style="height: 100px; width:130px; margin-left:20px;"/>
+            <img src="../images/imagesAutres/houses.PNG" style="height: 100px; width:130px; margin-left:20px;" />
+            <img src="../images/imagesAutres/booking.PNG" style="height: 100px; width:130px; margin-left:10px;"/>
+
+            <img src="../images/imagesAutres/logout.PNG" style="margin-top:245px;" />
+                </div>
+    </div>
+
+      
+
+        </div>
+    </form>
+</body>
+</html>
