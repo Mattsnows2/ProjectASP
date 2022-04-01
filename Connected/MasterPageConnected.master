@@ -18,7 +18,7 @@
            
 
         </asp:ContentPlaceHolder>
-        <div style="margin-top:-451px;">
+        <div style="position:absolute; top: 67px;">
             <div style="height:100%; width:186px; background-color:#004E86;">
             <img src="../images/imagesAutres/logo.png"  style="height: 100px; width:100px; margin-left:30px;"/>
             <img src="../images/imagesAutres/dashboard.PNG" style="height: 100px; width:130px; margin-left:20px;"/>
