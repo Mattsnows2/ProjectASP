@@ -44,7 +44,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                   
-              <img src="images/imagesAutres/dashboard.PNG" style="height: 148px; width: 196px" />
+              <img src="images/imagesAutres/dashboardBlanc.PNG" style="height: 148px; width: 196px" />
             <h2 class="subText">Services and constraints</h2>
             <p >Add services and constraints during the exchange such as taking care of your pet at home</p>
           </div>
