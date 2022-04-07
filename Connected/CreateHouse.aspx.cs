@@ -59,6 +59,8 @@ public partial class Connected_CreateHouse : System.Web.UI.Page
         con.Close();
 
         // Show the user that the booking has been added
+
+        Response.Redirect("CreateHouse2.aspx");
      
     }
 

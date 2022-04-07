@@ -60,6 +60,9 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+
+        System.Threading.Thread.Sleep(3000);
+        Response.Redirect("MyHouses.aspx");
     }
 
 }
