@@ -4,11 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="340px" >
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="340px" OnCreatedUser="CreateUserWizard1_CreatedUser" >
         <WizardSteps>
             <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                 <ContentTemplate>
-                    <table cellpadding="0" style="height:340px;width:1400px; margin-top:30px; font-family:Arial;">
+                  <table cellpadding="0" style="height:340px;width:1400px; margin-top:30px; font-family:Arial;">
                         <tr>
                             <td  align="center" style="font-size:28px; color:#212529;">Please sign up<br /> </td>
                         </tr>
@@ -17,6 +17,7 @@
                             <tr>
                              
                                 <td style="text-align:center; ">
+                                     
                                     <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" style="font-size:16px; font-family:Arial; color:#212529;">User Name <span style="color:red;">*</span></asp:Label>
                                 </td>
                                 <tr>

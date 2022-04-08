@@ -9,65 +9,61 @@
                 <h1 style="position:fixed; color:#FFFFFF; font-size:32px; font-family:Arial; margin-left:700px; padding-bottom:10px; top: 7px; left: 21px; width: 188px;">New House</h1>
     </div>
 
-    <div id="form" style="margin-left:200px;">
+    <div id="form" style="margin-left:200px; margin-top:50px;">
     <label style="color:#212529; font-family:Arial; ">Home Adress :</label>
         <br />
         
-        <asp:TextBox ID="TextBox1" runat="server" style="background:white; border:1px solid white; width:900px; height:38px; margin-bottom:50px;"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" style="background:white; border:1px solid white; width:1100px; height:38px; margin-bottom:50px;"></asp:TextBox>
    
    <br />
-    <label style="color:#212529; font-family:Arial; ">Type of your house :</label>
+
+          <asp:Label style="color:#212529; font-family:Arial; "   ID="timeLabel" runat="server" >Type of your house :</asp:Label>
         <br />
-      <asp:TextBox ID="TextBox2" runat="server" style="background:white; border:1px solid white; width:900px; height:38px; margin-bottom:50px;"></asp:TextBox>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
+            SelectCommand="SELECT [label] FROM [House_type]"></asp:SqlDataSource>
+
+  
+    <asp:DropDownList ID="houseTypeDropDownList" runat="server" Width="120px" 
+       DataSourceID="SqlDataSource2" DataTextField="label" DataValueField="label" style="background:white; border:1px solid white; width:1100px; height:38px; margin-bottom:50px;">
+   </asp:DropDownList>
+
+
+
+   
         
         <br />
-     <label style="color:#212529; font-family:Arial; ">Description :</label>s
+     <label style="color:#212529; font-family:Arial; ">Description :</label>
         <br />
         
-        <asp:TextBox ID="TextBox3" runat="server" style="height: 134px; width: 1100px; position:relative; border:1px solid white;"></asp:TextBox>
+        <asp:TextBox ID="TextBox3" runat="server" style="height: 300px; width: 1100px; position:relative; border:1px solid white;"></asp:TextBox>
 
         </div>
     
    
-    <asp:Button ID="BookingButton" runat="server" Text="Next" style="float:right;" onclick="BookingButton_Click" />
+    <asp:Button ID="BookingButton" runat="server" Text="Next" style="width:100px; height:40px; color:white; font-family:Arial; font-size:18px; border-radius:5px; background-color:#007BFF; border: 1px solid #007BFF; float :right" onclick="BookingButton_Click" />
    <br /><br />
 
       
    <asp:Label ID="resultLabel" style="float:right;" runat="server" Text=""></asp:Label>
 
-  
-
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [address], [description], [exchange_date], [house_type] FROM [houses] WHERE ([description] NOT LIKE '%' + @description + '%')">
-
-       
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
+        SelectCommand="SELECT [Id] FROM [User] WHERE ([userName] = @userName)">
         <SelectParameters>
-            <asp:SessionParameter SessionField="userName" Name="description" Type="String"></asp:SessionParameter>
+            <asp:SessionParameter SessionField="userName" Name="userName" Type="String"></asp:SessionParameter>
         </SelectParameters>
     </asp:SqlDataSource>
+
+     <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="Id" DataValueField="Id" DataSourceID="SqlDataSource1" style="float:right;"></asp:DropDownList>
+
+
+  
+ 
+
+
 
  
   
 
-
-        <asp:GridView style="float:right;" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
-        <Columns>
-            <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
-            <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-            <asp:BoundField DataField="exchange_date" HeaderText="exchange_date" SortExpression="exchange_date" />
-            <asp:BoundField DataField="house_type" HeaderText="house_type" SortExpression="house_type" />
-        </Columns> 
-        <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
-        <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
-        <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
-        <RowStyle BackColor="White" ForeColor="#003399" />
-        <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-        <SortedAscendingCellStyle BackColor="#EDF6F6" />
-        <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
-        <SortedDescendingCellStyle BackColor="#D6DFDF" />
-        <SortedDescendingHeaderStyle BackColor="#002876" />
-
-
-            </asp:GridView>
 
 
 
