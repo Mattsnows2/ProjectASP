@@ -20,12 +20,28 @@
         </asp:ContentPlaceHolder>
         <div style="position:absolute; top: 67px;">
             <div style="height:100%; width:186px; background-color:#004E86;">
-            <img src="../images/imagesAutres/logo.png"  style="height: 100px; width:100px; margin-left:30px;"/>
-            <img src="../images/imagesAutres/dashboard.PNG" style="height: 100px; width:130px; margin-left:20px;"/>
-            <img src="../images/imagesAutres/houses.PNG" style="height: 100px; width:130px; margin-left:20px;" />
-            <img src="../images/imagesAutres/booking.PNG" style="height: 100px; width:130px; margin-left:10px;"/>
+          
+           
+                <asp:ImageButton ImageUrl="~/images/imagesAutres/logo2.png" runat="server"  CausesValidation="false" 
+            CommandName="Select"  OnClick="redirectDashboard" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130"/>
+            
+            <asp:ImageButton ImageUrl="~/images/imagesAutres/dashboard.PNG" runat="server"  CausesValidation="false" 
+            CommandName="Select"  OnClick="redirectDashboard" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130"/>
+
+            <asp:ImageButton ImageUrl="~/images/imagesAutres/houses.PNG" runat="server"  CausesValidation="false" 
+            CommandName="Select"  OnClick="redirectHouse" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130"/>
+           
+            <asp:ImageButton ImageUrl="~/images/imagesAutres/booking.PNG" runat="server"  CausesValidation="false" 
+            CommandName="Select"  OnClick="redirectBooking" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130"/>
+
 
             <img src="../images/imagesAutres/logout.PNG" style="margin-top:245px;" />
+
+
+             
+
+
+
                 </div>
     </div>
 

@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 
 public partial class Register : System.Web.UI.Page
 {
+    public bool displayMessage;
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -30,6 +31,9 @@ public partial class Register : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+        displayMessage = true;
+
+        Response.AppendHeader("Refresh", "3;url=HomePage.aspx");
     }
 
 

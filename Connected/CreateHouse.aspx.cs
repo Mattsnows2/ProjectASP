@@ -30,7 +30,7 @@ public partial class Connected_CreateHouse : System.Web.UI.Page
 
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
-        string sqlStr = "INSERT INTO houses (address, description, exchange_date, housing_type, house_type, user_id, booked_by) VALUES (@address, @description, @exchangeDate, @housingType,@HouseType, @userId, @bookedBy)";
+        string sqlStr = "INSERT INTO houses (address, description, exchange_date, housing_type, house_type, user_id, booked_by, user_owner) VALUES (@address, @description, @exchangeDate, @housingType,@HouseType, @userId, @bookedBy, @userOwner)";
 
         // Open the database connection
         con.Open();
@@ -43,7 +43,8 @@ public partial class Connected_CreateHouse : System.Web.UI.Page
         sqlCmd.Parameters.AddWithValue("@housingType", DBNull.Value);
         sqlCmd.Parameters.AddWithValue("@HouseType", houseTypeDropDownList.SelectedValue);
         sqlCmd.Parameters.AddWithValue("@userId", DropDownList1.SelectedValue);
-        sqlCmd.Parameters.AddWithValue("@bookedBy", User.Identity.Name);
+        sqlCmd.Parameters.AddWithValue("@bookedBy", DBNull.Value);
+        sqlCmd.Parameters.AddWithValue("@userOwner", User.Identity.Name);
 
 
 

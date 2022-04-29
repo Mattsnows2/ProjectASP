@@ -77,6 +77,20 @@ a {
 
 .CGU h2 {
     font-family:Arial;
-    font-size:32px;
+    font-size:32px;q
     color:#212529;
 }
+
+
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('../font/Lato-Light.ttf') format('eot'), 
+        url('../font/Lato-Light.ttf') format('woff'), 
+        url('../font/Lato-Light.ttf') format('truetype'), 
+        url('../font/Lato-Light.ttf') format('svg');
+}
+
+td{
+    font-family:'MaSuperPolice';
+}
+

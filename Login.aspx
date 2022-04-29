@@ -45,7 +45,7 @@
                             <tr>
                                 <td align="center" colspan="2">
                                     <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Sign In" ValidationGroup="Login1" style="  
-                                        background-color: rgb(0,123,255);color: white;border:solid 2px rgb(0,123,255);border-radius: 10px; width:300px;height:48px; font-size:20px; font-family:Arial;" />
+                                        background-color: rgb(0,123,255);color: white;border:solid 2px rgb(0,123,255);border-radius: 10px; width:300px;height:48px; font-size:20px; font-family:Arial;" OnClick="LoginButton_Click"  />
                                 </td>
                             </tr>
                         </table>
@@ -61,15 +61,23 @@
       <footer style="margin-top:200px;">
             <hr style="height: -15px" />
           <p>
-          <img style=" margin-left:150px;float:left; height: 84px; width: 92px;" src="images/imagesAutres/logo.png" />
+          <img style="margin-top:0px; margin-left:150px;float:left; height: 59px; width: 68px;" src="images/imagesAutres/logo.png" />
+                 <p style="font-size:12px;margin-left:200px; color:#6C757D; height: 35px; width:100px;">© 2021, Powered by our own skills</p>
               </p>
-          <p style="font-size:12.8px; color:#6C757D;line-height:84px;">© 2021, Powered by our own skills</p>
-            <a style="margin-left:715px; font-size:20px; color:#212529;">About</a>
-            <ul style="list-style-type:none; text-align:center;">
-                <li><a href="#" style="text-decoration:none; color:#6C757D; font-size:16px;">Contact</a></li>
-                <li><a href="#" style="text-decoration:none; color:#6C757D; font-size:16px;">CGU</a></li>
+       
+            <ul style="list-style-type:none; text-align:center; ">
+                  <li style="margin-left:114px; font-size:20px; color:#212529; margin-top:-10px; height: 22px; width: 1033px;">About</li>
             </ul>
 
+          
+            
+            <ul style="list-style-type:none; text-align:center; ">
+                <li style="height: 18px; width: 593px; margin-left: 366px"><a href="contactPage.aspx" style="text-decoration:none; color:#6C757D; font-size:16px;">Contact</a></li>
+                <li style="width: 599px; margin-left: 361px"><a href="CGU.aspx" style="text-decoration:none; color:#6C757D; font-size:16px;">CGU</a></li>
+            </ul>
+
+          
+            
         </footer>
 
     

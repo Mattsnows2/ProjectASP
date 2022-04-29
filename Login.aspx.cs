@@ -11,8 +11,10 @@ public partial class Login : System.Web.UI.Page
     {
 
     }
-    protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-    {
+    
 
+    protected void LoginButton_Click(object sender, EventArgs e)
+    {
+       // Response.Redirect("Connected/HomeConnected.aspx");
     }
 }
