@@ -3,9 +3,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-   <!-- <div id="header" >
+    <!-- <div id="header" >
                 &nbsp;&nbsp;&nbsp;
                 <h1 style="position:fixed; color:#FFFFFF; font-size:32px; font-family:Arial; margin-left:700px; padding-bottom:10px; top: 7px; left: 21px; width: 188px;">Booking</h1>
     </div>
@@ -18,9 +18,9 @@
 
         <input id="Button2" type="button" value="🗑️ Delete booking" style="width:150px; height:38px; background-color:#ff0000; color:white; font-size:16px; font-family:Arial; float:right; border: 1px solid #FFFFFF; border-radius:5px; margin-left: 34px;"/></div>
     -->
-    
 
-    <div style="background-color:darkcyan; float:right" >
+
+    <div style="background-color: darkcyan; float: right">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Style="margin-left: 0px; background-color: grey; font-size: 32px;">
             <Columns>
 
@@ -49,7 +49,7 @@
 
         </SelectParameters>
     </asp:SqlDataSource>
-        
+
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT DISTINCT [Id] FROM [User] WHERE ([userName] = @userName)" OnSelecting="SqlDataSource2_Selecting">
         <SelectParameters>
             <asp:SessionParameter SessionField="userName" Name="userName" Type="String"></asp:SessionParameter>
