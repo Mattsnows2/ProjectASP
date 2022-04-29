@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Connected/MasterPageConnected.master"CodeFile="Booking.aspx.cs" Inherits="Connected_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Connected/MasterPageConnected.master"CodeFile="Dashboard.aspx.cs" Inherits="Connected_Default" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -43,11 +43,17 @@
         </asp:GridView>
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [houses] WHERE ([booked_by] = @booked_by) ORDER BY [exchange_date]" OnSelecting="SqlDataSource1_Selecting">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [houses] WHERE ([user_id] <> @user_id)" OnSelecting="SqlDataSource1_Selecting">
         <SelectParameters>
-            <asp:SessionParameter SessionField="userName" DefaultValue="" Name="booked_by" Type="String"></asp:SessionParameter>
+            <asp:QueryStringParameter QueryStringField="SqlDataSource2" Name="user_id" Type="Int32"></asp:QueryStringParameter>
+
         </SelectParameters>
     </asp:SqlDataSource>
         
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT DISTINCT [Id] FROM [User] WHERE ([userName] = @userName)" OnSelecting="SqlDataSource2_Selecting">
+        <SelectParameters>
+            <asp:SessionParameter SessionField="userName" Name="userName" Type="String"></asp:SessionParameter>
+        </SelectParameters>
+    </asp:SqlDataSource>
 
 </asp:Content>
