@@ -38,7 +38,7 @@
           </div>
           <div class="col-lg-4">
 
-              <div style="float:left; height: 85px; width: 450px; margin-left: 0px;">
+              <div style="float:left; height: 85px; width: 505px; margin-left: 0px;">
 
                   
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -164,14 +164,26 @@
 
     <br />
 
-     <footer>
+       <footer style="margin-top:200px;">
             <hr style="height: -15px" />
-            <a style="text-align:center">About</a>
-            <ul style="list-style-type:none; text-align:center;">
-                <li><a href="#" style="text-decoration:none; color:#6C757D; font-size:16px;">Contact</a></li>
-                <li><a href="#" style="text-decoration:none; color:#6C757D; font-size:16px;">CGU</a></li>
+          <p>
+          <img style="margin-top:0px; margin-left:150px;float:left; height: 59px; width: 68px;" src="images/imagesAutres/logo.png" />
+                 <p style="font-size:12px;margin-left:200px; color:#6C757D; height: 35px; width:100px;">© 2021, Powered by our own skills</p>
+              </p>
+       
+            <ul style="list-style-type:none; text-align:center; ">
+                  <li style="margin-left:114px; font-size:20px; color:#212529; margin-top:-10px; height: 22px; width: 1033px;">About</li>
             </ul>
 
+          
+            
+            <ul style="list-style-type:none; text-align:center; ">
+                <li style="height: 18px; width: 593px; margin-left: 366px"><a href="contactPage.aspx" style="text-decoration:none; color:#6C757D; font-size:16px;">Contact</a></li>
+                <li style="width: 599px; margin-left: 361px"><a href="CGU.aspx" style="text-decoration:none; color:#6C757D; font-size:16px;">CGU</a></li>
+            </ul>
+
+          
+            
         </footer>
 
 

@@ -11,4 +11,19 @@ public partial class Connected_MasterPageConnected : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void redirectBooking(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("myBookings.aspx");
+    }
+
+    protected void redirectHouse(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("MyHouses.aspx");
+    }
+
+    protected void redirectDashboard(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("HomeConnected.aspx");
+    }
 }

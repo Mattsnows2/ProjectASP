@@ -9,3 +9,29 @@
     width:100%;
     
 }
+
+.MyCalendar .ajax__calendar_container {
+    border: 1px solid #646464;
+    background-color: #FFFFFF;
+    color: black;
+    width: 400px;
+    height: 400px;
+}
+
+.MyCalendar .ajax__calendar_body {
+    width: 400px;
+    height: 300px;
+}
+
+.MyCalendar .ajax__calendar_day {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+}
+
+.MyCalendar .ajax__calendar_dayname {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    font-weight: bold;
+}

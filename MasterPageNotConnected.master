@@ -20,13 +20,15 @@
              
                 <div id="tree"style="float:right;" >
                   
-                             <asp:Menu ForeColor="white" Font-Size="16px" style="border:1px solid white; color:white;" ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2">
+                             <asp:Menu ForeColor="white" Font-Size="20px" style="color:white; padding-top:20px;" ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2">
 
                              
                              </asp:Menu>
                        
                 </div>
-                <img src="images/imagesAutres/logo.png" style="height: 70px; width:     70px" />                        
+               
+
+                <asp:ImageButton ID="buttonHome" ImageUrl="~/images/imagesAutres/logo.PNG" runat="server" style="height:70px; width:70px;" />
             </div>
 
         </div>
