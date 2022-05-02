@@ -56,7 +56,13 @@
      <asp:DropDownList ID="DropDownList2" runat="server" DataTextField="Id" DataValueField="Id" DataSourceID="SqlDataSource3" style="float:right;"></asp:DropDownList>
   
 
+    <%      if (displayMessage == false)
+        {  %>
+    <div style="background-color:green; width:300px; height:50px; margin-left:1120px; margin-top:-400px;">
+        <p style="font-family:Arial; color:white; font-size:20px; margin-top:15px; text-align:center;">House created</p>
+    </div>
 
+    <% }  %>
    
 </asp:Content>
 

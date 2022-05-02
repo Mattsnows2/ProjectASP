@@ -16,11 +16,7 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
     public bool chooseDate;
     protected void Page_Load(object sender, EventArgs e)
     {
-
         Session["userName"] = User.Identity.Name;
-      
-
-
     }
 
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,9 +28,6 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 
     protected void bookHouse(object sender, EventArgs e)
     {
-
-
-        Response.Write(index);
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         // Creates a connection to our database
@@ -43,8 +36,6 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
         string sqlStr = "UPDATE houses SET booked_by = @User WHERE Id = @houseId";
-      
-       
 
         // Open the database connection
         con.Open();
@@ -55,22 +46,8 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
         sqlCmd.Parameters.Add("@houseId", SqlDbType.Int);
         sqlCmd.Parameters["@houseId"].Value = index;
 
-     
-       
-       
-        
-
-
-
-
-
-
         // Execute the SQL command
         sqlCmd.ExecuteNonQuery();
-       
-
-
-
 
         // Close the connection to the database
         con.Close();
@@ -103,42 +80,21 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 
         string sqlStr2 = "INSERT INTO Bookings (asker_user,offer_houser,end_date,start_date) VALUES (@asker, @Owner, @endDate, @StartDate)";
 
-
         // Open the database connection
         con.Open();
 
-
-
         SqlCommand sqlCmd2 = new SqlCommand(@sqlStr2, con);
-
         sqlCmd2.Parameters.AddWithValue("@asker", User.Identity.Name);
         sqlCmd2.Parameters.AddWithValue("@Owner", houseTypeDropDownList.SelectedValue);
-
         sqlCmd2.Parameters.AddWithValue("@endDate", DBNull.Value);
         sqlCmd2.Parameters.AddWithValue("@StartDate", theDate);
 
-
-
-
-
-
-
         // Execute the SQL command
-
         sqlCmd2.ExecuteNonQuery();
-
-
-
 
         // Close the connection to the database
         con.Close();
-
-
-
-
-
     }
-   
    
     protected void Calendar2_SelectionChanged(object sender, EventArgs e)
     {
@@ -153,33 +109,16 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
-
         string sqlStr3 = "UPDATE  Bookings SET end_date=@endDate WHERE Id = (select max(Id) from Bookings)";
-
-       
-       
 
         // Open the database connection
         con.Open();
-
-
 
         SqlCommand sqlCmd3 = new SqlCommand(@sqlStr3, con);
         sqlCmd3.Parameters.Add("@endDate", SqlDbType.Date);
         sqlCmd3.Parameters["@endDate"].Value = theDate2;
 
-        
-
-
-
-
-
-
-
-
-
         // Execute the SQL command
-
         sqlCmd3.ExecuteNonQuery();
 
         string sqlStr4 = "UPDATE houses SET exchange_date = @exchangeDate WHERE id = @houseId";
@@ -189,21 +128,11 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
         sqlCmd4.Parameters["@houseId"].Value = index;
         sqlCmd4.Parameters.Add("@exchangeDate", SqlDbType.NVarChar);
         sqlCmd4.Parameters["@exchangeDate"].Value = "yo";
+
+        // Execute the SQL command
         sqlCmd4.ExecuteNonQuery();
-
-
-
 
         // Close the connection to the database
         con.Close();
-
-
     }
-
-
-
-
-
-
-      
 }

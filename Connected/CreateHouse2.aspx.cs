@@ -13,6 +13,7 @@ using System.Data;
 
 public partial class Connected_CreateHouse2 : System.Web.UI.Page
 {
+    public bool displayMessage=false;
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -37,17 +38,12 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
             sqlconn.Close();
 
         }
-        else
-        {
-
-        }
-
-
-
     }
 
     protected void createHouse(object sender, EventArgs e)
     {
+        
+        = true;
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(dbstring);
         string sqlStr = "INSERT INTO House_contraints (house_id, user_id) VALUES (@house_id, @user_id)";
@@ -61,8 +57,10 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
         // Close the connection to the database
         con.Close();
 
+       
         System.Threading.Thread.Sleep(3000);
         Response.Redirect("MyHouses.aspx");
+        
     }
 
 }

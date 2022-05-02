@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         
         <div id="header" >
-                <h1 style="position:absolute;">Dashboard</h1>
+                <h1 style="position:absolute; color:white; font-family:Arial; font-size:28px; text-align:center;">Dashboard</h1>
     </div>
 
       <div  style="background-color:#F0F0F0; margin-left:300px; margin-top:200px; font-family:Arial">

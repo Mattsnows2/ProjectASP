@@ -14,7 +14,9 @@
     <a href="CreateHouse.aspx"><input id="Button1" type="button" value="+ Add new house" style="width:150px; height:38px; background-color:#28A745; color:white; font-size:16px; font-family:Arial; float:right; border: 1px solid #28A745; border-radius:5px;"/></a>
 
   
-    <div  align="center" style="margin-top:70px;">
+          <% if (displayHouse==true)
+              { %>
+          <div  align="center" style="margin-top:70px;">
         
     <img src="../images/imagesAutres/nohouse_muted.png" Width="423px" Heigth="250px"/>
     </div>
@@ -22,14 +24,17 @@
         
     <h2 style="color:#6C757D; font-size:32px; font-family:Arial; margin-left:180px; text-align:center;">You haven't added any houses yet, they will appear here when you start adding them.</h2>
 
+        <%} %>
+
+  
+
     </div>
 
   
 
     
-    <%# MyHouses(false) %>
-
-    <div  style="background-color:#F0F0F0; margin-left:350px;">
+ 
+    <div  style="background-color:#F0F0F0; margin-left:350px; margin-top:200px;">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Style="margin-left: 0px; background-color: #F0F0F0; font-size: 32px; border-radius:10px;" DataKeyNames="Id" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BorderColor="#F0F0F0" CellSpacing="30">
             <Columns>
 
@@ -43,14 +48,7 @@
               
                 <asp:BoundField DataField="house_type" HeaderText="house_type" SortExpression="house_type"></asp:BoundField>
 
-                 
-          
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:DropDownList ID="DropDownList2" runat="server" DataTextField="Id" DataValueField="Id" DataSourceID="SqlDataSource1" style="float:right;"></asp:DropDownList>
-                    </ItemTemplate>
-                </asp:TemplateField>
-
+           
                 <asp:TemplateField>
                     <ItemTemplate>
                     <asp:ImageButton ImageUrl="~/images/imagesAutres/EYE.PNG" runat="server"  CausesValidation="false" CommandArgument='<%# Container.DataItemIndex %>'  

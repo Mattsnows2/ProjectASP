@@ -25,7 +25,6 @@ public partial class myBookings : System.Web.UI.Page
     }
         protected void DeleteBooking(object sender,  EventArgs e)
     {
-        Response.Write(index);
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         // Creates a connection to our database
@@ -35,8 +34,6 @@ public partial class myBookings : System.Web.UI.Page
         // we automatically get some protection against SQL injection.
         string sqlStr = "UPDATE houses SET booked_by = @User WHERE Id = @houseId ";
     
-
-
         // Open the database connection
         con.Open();
 
@@ -46,20 +43,8 @@ public partial class myBookings : System.Web.UI.Page
         sqlCmd.Parameters.Add("@houseId", SqlDbType.Int);
         sqlCmd.Parameters["@houseId"].Value = index;
 
-      
-
-       
-
-
-
-
-
-
         // Execute the SQL command
         sqlCmd.ExecuteNonQuery();
-       
-
-
 
         // Close the connection to the database
         con.Close();
