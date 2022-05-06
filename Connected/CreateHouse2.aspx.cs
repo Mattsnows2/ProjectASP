@@ -42,8 +42,8 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
 
     protected void createHouse(object sender, EventArgs e)
     {
-
-        displayMessage = true;
+        
+        = true;
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(dbstring);
         string sqlStr = "INSERT INTO House_contraints (house_id, user_id) VALUES (@house_id, @user_id)";

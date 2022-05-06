@@ -5,12 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
 
-    <asp:Login ID="Login1" runat="server" Height="340px">
+    <asp:Login ID="Login1" runat="server" Height="340px" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333">
+        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
         <LayoutTemplate>
             <table cellpadding="1" cellspacing="0" style="border-collapse: collapse;">
                 <tr>
                     <td>
-                        <table cellpadding="0" style="height: 340px; width: 1400px;">
+                        <table cellpadding="0" style="height: 340px; width: 1550px;">
                             <tr>
                                 <td align="center" colspan="2" style="font-size: 28px; color: #212529;">
                                     <br />
@@ -22,14 +23,14 @@
                             <tr>
 
                                 <td>
-                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 550px;" ID="UserName" runat="server"></asp:TextBox>
+                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 625px;" ID="UserName" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
 
                                 <td>
-                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 550px;" ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 625px;" ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
@@ -54,6 +55,9 @@
                 </tr>
             </table>
         </LayoutTemplate>
+        <LoginButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
+        <TextBoxStyle Font-Size="0.8em" />
+        <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
     </asp:Login>
 
 
