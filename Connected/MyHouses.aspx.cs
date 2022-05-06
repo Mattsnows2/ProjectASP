@@ -54,10 +54,12 @@ public partial class Connected_MyHouses : System.Web.UI.Page
         SqlCommand sqlCmd2 = new SqlCommand(sqlStr2, con);
         sqlCmd2.Parameters.Add("@houseId", SqlDbType.Int);
         sqlCmd2.Parameters["@houseId"].Value = index;
+        sqlCmd2.ExecuteNonQuery();
 
         SqlCommand sqlCmd3 = new SqlCommand(sqlStr3, con);
         sqlCmd3.Parameters.Add("@houseId2", SqlDbType.Int);
         sqlCmd3.Parameters["@houseId2"].Value = index;
+        sqlCmd3.ExecuteNonQuery();
 
         SqlCommand sqlCmd = new SqlCommand(sqlStr, con);
         sqlCmd.Parameters.Add("@User", SqlDbType.NVarChar);
@@ -66,13 +68,13 @@ public partial class Connected_MyHouses : System.Web.UI.Page
         sqlCmd.Parameters["@houseId3"].Value = index;
 
         // Execute the SQL command
-        sqlCmd2.ExecuteNonQuery();
-        sqlCmd3.ExecuteNonQuery();
+        
+        
         sqlCmd.ExecuteNonQuery();
 
         // Close the connection to the database
         con.Close();
 
-       // Response.AppendHeader("Refresh", "url=myHouses.aspx");
+        // Response.Redirect("~/Connected/HomeConnected.aspx");
     }
 }
