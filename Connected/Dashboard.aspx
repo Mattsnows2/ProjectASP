@@ -50,7 +50,7 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT DISTINCT [Id] FROM [User] WHERE ([userName] = @userName)" OnSelecting="SqlDataSource2_Selecting">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT DISTINCT [Id] FROM [User] WHERE ([userName] = @userName)">
         <SelectParameters>
             <asp:SessionParameter SessionField="userName" Name="userName" Type="String"></asp:SessionParameter>
         </SelectParameters>
