@@ -19,13 +19,12 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
         
     }
 
-    Bitmap imageClient;
     protected void browse(object sender, EventArgs e)
     {
       if(FileImageSave.PostedFile != null)
         {
             string imgFile = Path.GetFileName(FileImageSave.PostedFile.FileName);
-            FileImageSave.SaveAs("C:\\Users\\matth\\OneDrive\\Images\\Captures d’écran" + imgFile);
+            FileImageSave.SaveAs("\\images\\images\\Captures d’écran" + imgFile);
             string mainconn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
@@ -42,8 +41,8 @@ public partial class Connected_CreateHouse2 : System.Web.UI.Page
 
     protected void createHouse(object sender, EventArgs e)
     {
-        
-        = true;
+
+        displayMessage = true;
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(dbstring);
         string sqlStr = "INSERT INTO House_contraints (house_id, user_id) VALUES (@house_id, @user_id)";
