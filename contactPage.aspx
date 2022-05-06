@@ -5,6 +5,10 @@
         .auto-style1 {
             width: 1396px;
         }
+        .auto-style2 {
+            width: 291px;
+            height: 300px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -14,7 +18,7 @@
         <table>
             <tr>
                 <td > <a href="https://fr.linkedin.com/"><img src="images/imagesAutres/pictureMatthias.jpg"/> <p>CEO of SwapHome</p> </a> </td>
-                <td> <a href="https://fr.linkedin.com/"><img src="images/imagesAutres/pictureMatthias.jpg"/> <p>CTO of SwapHome</p> </a> </td>
+                <td> <a href="https://fr.linkedin.com/"><img src="images/imagesAutres/pictureGuillaume.jpg" class="auto-style2"/> <p>CTO of SwapHome</p> </a> </td>
             </tr>
         </table>
     </div>
