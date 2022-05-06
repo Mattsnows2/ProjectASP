@@ -48,6 +48,14 @@
     
 
     </div>
+      <%if (displayMessageDeleteBooking == true)
+        {  %>
+
+            <div style="background-color:green; width:300px; height:50px; float:right;">
+            <p style="font-family:Arial; font-size:20px; color:white; text-align:center;">Booking deleted</p>
+
+                </div>
+<%  } %>  
 
     
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>'

@@ -69,33 +69,37 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-      <asp:DropDownList ID="houseTypeDropDownList" runat="server" Width="120px" 
-       DataSourceID="SqlDataSource1" DataTextField="user_owner" DataValueField="user_owner" style="background:white; border:1px solid white; width:1100px; height:38px; margin-bottom:50px;">
+      <asp:DropDownList ID="houseTypeDropDownList" runat="server" 
+       DataSourceID="SqlDataSource1" DataTextField="user_owner" DataValueField="user_owner" style="background:white; border:1px solid white; margin-bottom:50px;">
    </asp:DropDownList>
 
   
+    <%      if (chooseDate == true)
+        {  %>
+
+            <p style="font-family:Arial; font-size:20px; margin-left:250px;">Can choose a start date and end date</p>
+<%  } %>  
+
+      
+    <%      if (displayMessageBookingGood == true)
+        {  %>
+
+            <div style="background-color:green; width:300px; height:50px; float:right;">
+            <p style="font-family:Arial; font-size:20px; color:white; text-align:center;">Booking is good</p>
+
+                </div>
+<%  } %>  
     
-  
-    <% if(chooseDate) { %>
-
-     
-
-   
-       
-<% } %>
-
       
 
         <div style="margin-left:250px;">
 
       
-        <p>Start Date: 
+        <p style="font-family:Arial; font-size:20px;">Start Date: 
             <asp:Label ID="bookingDate" runat="server"></asp:Label>
          </p>
 
-             <p>End date: 
-            <asp:Label ID="bookingDate2" runat="server"></asp:Label>
-         </p>
+         
   
     
      <asp:Calendar ID = "Calendar1" runat = "server" SelectionMode="DayWeekMonth" onselectionchanged="Calendar1_SelectionChanged">
@@ -103,10 +107,13 @@
 
        
        
-         
+           
   
 
-     <div style="margin-top:-180px; margin-left:700px;">
+     <div style="margin-top:-230px; margin-left:700px;">
+           <p style="font-family:Arial; font-size:20px;">End date: 
+            <asp:Label ID="bookingDate2" runat="server"></asp:Label>
+         </p>
      <asp:Calendar ID = "Calendar2" runat = "server" SelectionMode="DayWeekMonth" onselectionchanged="Calendar2_SelectionChanged">
 </asp:Calendar>
         </div>
