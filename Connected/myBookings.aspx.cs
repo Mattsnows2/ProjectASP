@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 public partial class myBookings : System.Web.UI.Page
 {
     public int index;
+    public bool displayMessageDeleteBooking;
     protected void Page_Load(object sender, EventArgs e)
     {
         Session["userName"]=User.Identity.Name; 
@@ -48,6 +49,8 @@ public partial class myBookings : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+        displayMessageDeleteBooking = true;
+        Response.AppendHeader("Refresh", "3;url=myBookings.aspx");
 
     }
 }

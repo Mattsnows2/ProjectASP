@@ -14,6 +14,7 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 {
     public int index;
     public bool chooseDate;
+    public bool displayMessageBookingGood;
     protected void Page_Load(object sender, EventArgs e)
     {
         Session["userName"] = User.Identity.Name;
@@ -134,5 +135,10 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+
+        displayMessageBookingGood = true;
+
+        Response.AppendHeader("Refresh", "3;url=HomeConnected.aspx");
+     
     }
 }

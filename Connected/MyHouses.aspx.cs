@@ -45,8 +45,8 @@ public partial class Connected_MyHouses : System.Web.UI.Page
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
         string sqlStr2 = "DELETE FROM House_contraints WHERE house_id=@houseId";
-        string sqlStr3 = "DELETE FROM houses_pictures WHERE house_id = @houseId";
-        string sqlStr = "DELETE FROM houses WHERE id=@houseId";
+        string sqlStr3 = "DELETE FROM houses_pictures WHERE house_id = @houseId2";
+        string sqlStr = "DELETE FROM houses WHERE id=@houseId3";
         
         // Open the database connection
         con.Open();
@@ -56,14 +56,14 @@ public partial class Connected_MyHouses : System.Web.UI.Page
         sqlCmd2.Parameters["@houseId"].Value = index;
 
         SqlCommand sqlCmd3 = new SqlCommand(sqlStr3, con);
-        sqlCmd2.Parameters.Add("@houseId", SqlDbType.Int);
-        sqlCmd2.Parameters["@houseId"].Value = index;
+        sqlCmd3.Parameters.Add("@houseId2", SqlDbType.Int);
+        sqlCmd3.Parameters["@houseId2"].Value = index;
 
         SqlCommand sqlCmd = new SqlCommand(sqlStr, con);
         sqlCmd.Parameters.Add("@User", SqlDbType.NVarChar);
         sqlCmd.Parameters["@User"].Value = User.Identity.Name;
-        sqlCmd.Parameters.Add("@houseId", SqlDbType.Int);
-        sqlCmd.Parameters["@houseId"].Value = index;
+        sqlCmd.Parameters.Add("@houseId3", SqlDbType.Int);
+        sqlCmd.Parameters["@houseId3"].Value = index;
 
         // Execute the SQL command
         sqlCmd2.ExecuteNonQuery();
@@ -72,5 +72,7 @@ public partial class Connected_MyHouses : System.Web.UI.Page
 
         // Close the connection to the database
         con.Close();
+
+       // Response.AppendHeader("Refresh", "url=myHouses.aspx");
     }
 }
