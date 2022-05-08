@@ -28,7 +28,7 @@
                 </div>
                
 
-                <asp:ImageButton ID="buttonHome" ImageUrl="~/images/imagesAutres/logo.PNG" runat="server" style="height:70px; width:70px;" />
+                <asp:ImageButton ID="buttonHome" ImageUrl="~/images/imagesAutres/logo.PNG" runat="server" style="height:70px; width:70px;" OnClick="buttonHome_Click" />
             </div>
 
         </div>

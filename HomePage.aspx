@@ -23,7 +23,7 @@
             <div id="divEnvironment" runat="server" visible="true">
                 <asp:Image ID="Image1" style="width:100%;" Height="512px" runat="server" />
             </div>
-
+            
 
         </ContentTemplate>
     </asp:UpdatePanel>

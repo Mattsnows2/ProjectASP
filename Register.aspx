@@ -14,10 +14,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="340px" OnCreatedUser="CreateUserWizard1_CreatedUser" Width="1541px">
+    <div style="z-index:2;">
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="340px" OnCreatedUser="CreateUserWizard1_CreatedUser" Width="1390px">
         <WizardSteps>
             <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                 <ContentTemplate>
+
+                    <tr  style="color:#f4f5f4; width:0px; float:left;">
+                            <td >
+                                 <asp:Label BackColor="#f4f5f4"  ID="RoleLabel" runat="server" AssociatedControlID="RoleList">User Role:</asp:Label>
+                            </td>
+                            <td style="color:#f4f5f4; border-block-color:#f4f4f4">
+                                <asp:DropDownList  BackColor="#f4f5f4"  ForeColor="#f4f5f4" ID="RoleList" runat="server" Width="0px"></asp:DropDownList>
+                            </td>
+                        
+                        </tr>
                     <table cellpadding="0" style="height: 340px; width: 1400px; margin-top: 30px; font-family: Arial;">
                         <tr>
                             <td align="center" style="font-size: 28px; color: #212529;">Please sign up<br />
@@ -104,6 +115,8 @@
                                 </tr>
                             </tr>
                         </caption>
+
+                        
                     </table>
                 </ContentTemplate>
           </asp:CreateUserWizardStep>
@@ -125,7 +138,7 @@
             </asp:CompleteWizardStep>
         </WizardSteps> 
         <StartNavigationTemplate>
-            <asp:Button runat="server" CommandName="MoveNext" Text="Suivant" ID="StartNextButton"></asp:Button>
+            <asp:Button BackColor="Yellow" runat="server" CommandName="MoveNext" Text="Suivant" ID="StartNextButton"></asp:Button>
         </StartNavigationTemplate>
     </asp:CreateUserWizard>
 
@@ -152,5 +165,7 @@
           
             
         </footer>
+
+        </div>
 </asp:Content>
 

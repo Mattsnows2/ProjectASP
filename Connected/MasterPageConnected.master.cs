@@ -26,4 +26,9 @@ public partial class Connected_MasterPageConnected : System.Web.UI.MasterPage
     {
         Response.Redirect("HomeConnected.aspx");
     }
+
+    protected void logout(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("../HomePage.aspx");
+    }
 }

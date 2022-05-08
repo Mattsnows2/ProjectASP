@@ -65,5 +65,10 @@ public partial class Connected_CreateHouse : System.Web.UI.Page
      
     }
 
- 
+
+
+    protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Profil.aspx");
+    }
 }

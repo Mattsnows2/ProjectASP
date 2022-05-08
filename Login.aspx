@@ -1,17 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageNotConnected.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 340px;
+            width: 1434px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
 
-    <asp:Login ID="Login1" runat="server" Height="340px" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333">
+    <asp:Login ID="Login1" runat="server" Height="340px" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" DestinationPageUrl="~/Connected/HomeConnected.aspx">
         <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
         <LayoutTemplate>
             <table cellpadding="1" cellspacing="0" style="border-collapse: collapse;">
                 <tr>
                     <td>
-                        <table cellpadding="0" style="height: 340px; width: 1550px;">
+                        <table cellpadding="0" class="auto-style1">
                             <tr>
                                 <td align="center" colspan="2" style="font-size: 28px; color: #212529;">
                                     <br />
@@ -22,15 +28,15 @@
                             </tr>
                             <tr>
 
-                                <td>
-                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 625px;" ID="UserName" runat="server"></asp:TextBox>
+                                <td align="center">
+                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px;" ID="UserName" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
 
-                                <td>
-                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px; margin-left: 625px;" ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                <td align="center">
+                                    <asp:TextBox Style="background: white; border: 1px solid white; width: 300px; height: 46px;" ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
@@ -46,8 +52,8 @@
                             </tr>
                             <tr>
                                 <td align="center" colspan="2">
-                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Sign In" ValidationGroup="Login1" Style="background-color: rgb(0,123,255); color: white; border: solid 2px rgb(0,123,255); border-radius: 10px; width: 300px; height: 48px; font-size: 20px; font-family: Arial;"
-                                        OnClick="LoginButton_Click" />
+                                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Sign In" ValidationGroup="Login1" Style="background-color: rgb(0,123,255); color: white; border: solid 2px rgb(0,123,255); border-radius: 10px; width: 300px; height: 48px; font-size: 20px; font-family: Arial;" />
+                                     
                                 </td>
                             </tr>
                         </table>
@@ -84,6 +90,8 @@
 
 
     </footer>
+
+  
 
 
 

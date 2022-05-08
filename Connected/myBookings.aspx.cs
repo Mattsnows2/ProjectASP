@@ -50,7 +50,12 @@ public partial class myBookings : System.Web.UI.Page
         // Close the connection to the database
         con.Close();
         displayMessageDeleteBooking = true;
-        Response.AppendHeader("Refresh", "3;url=myBookings.aspx");
+      
 
+    }
+
+    protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Profil.aspx");
     }
 }

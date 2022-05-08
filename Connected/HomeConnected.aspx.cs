@@ -56,10 +56,7 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
         chooseDate = true;
     }
 
-    protected void ViewHouse(object sender, EventArgs e)
-    {
-
-    }
+  
     public DateTime theDate;
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
     {
@@ -138,7 +135,12 @@ public partial class Connected_HomeConnected : System.Web.UI.Page
 
         displayMessageBookingGood = true;
 
-        Response.AppendHeader("Refresh", "3;url=HomeConnected.aspx");
+        Response.AppendHeader("Refresh", "2;url=HomeConnected.aspx");
      
+    }
+
+    protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Profil.aspx");
     }
 }

@@ -8,6 +8,9 @@
         &nbsp;&nbsp;&nbsp;
                
         <h1 style="position: fixed; color: #FFFFFF; font-size: 32px; font-family: Arial; margin-left: 700px; padding-bottom: 10px; top: 7px; left: 21px; width: 188px;">New House</h1>
+         <div style="float:right">
+            <asp:ImageButton ImageUrl="~/images/imagesAutres/user.png" runat="server" Width="50px" OnClick="Unnamed1_Click" />
+                </div>
     </div>
 
     <div id="form" style="margin-left: 200px; margin-top: 50px;">
@@ -46,16 +49,16 @@
     <br />
 
 
-    <asp:Label ID="resultLabel" Style="float: right;" runat="server" Text=""></asp:Label>
+    <asp:Label ID="resultLabel" Style="float: left;" runat="server" Text=""></asp:Label>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
-        SelectCommand="SELECT [Id] FROM [User] WHERE ([userName] = @userName)">
+        SelectCommand="SELECT [UserId] FROM [vw_aspnet_MembershipUsers] WHERE ([UserName] = @UserName)">
         <SelectParameters>
-            <asp:SessionParameter SessionField="userName" Name="userName" Type="String"></asp:SessionParameter>
+            <asp:SessionParameter SessionField="userName" Name="UserName" Type="String"></asp:SessionParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="Id" DataValueField="Id" DataSourceID="SqlDataSource1" Style="float: right;"></asp:DropDownList>
+    <asp:DropDownList ID="DropDownList1" Width="50px" runat="server" DataTextField="UserId" DataValueField="UserId" DataSourceID="SqlDataSource1" Style="float: left;"></asp:DropDownList>
 
 
 

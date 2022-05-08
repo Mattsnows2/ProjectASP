@@ -19,7 +19,7 @@
 
         </asp:ContentPlaceHolder>
         <div style="position:absolute; top: 67px;">
-            <div style="height:100%; width:186px; background-color:#004E86;">
+            <div style="height:300%; width:186px; background-color:#004E86;">
           
            
                 <asp:ImageButton ImageUrl="~/images/imagesAutres/logo2.png" runat="server"  CausesValidation="false" 
@@ -35,8 +35,11 @@
             CommandName="Select"  OnClick="redirectBooking" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130"/>
 
 
-            <img src="../images/imagesAutres/logout.PNG" style="margin-top:245px;" />
+                <div style="margin-top:230px;">
+                <asp:ImageButton ImageUrl="~/images/imagesAutres/logout.PNG" runat="server"  CausesValidation="false" 
+            CommandName="Select"  OnClick="logout" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="100" Width="130" />
 
+           </div>
 
              
 

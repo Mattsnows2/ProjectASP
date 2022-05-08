@@ -12,7 +12,12 @@ public partial class MasterPageNotConnected : System.Web.UI.MasterPage
 
     }
 
-   
 
-   
+
+
+
+    protected void buttonHome_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("HomePage.aspx");
+    }
 }

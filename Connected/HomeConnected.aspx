@@ -7,11 +7,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         
         <div id="header" >
-                <h1 style="position:absolute; color:white; font-family:Arial; font-size:28px; text-align:center;">Dashboard</h1>
+                <h1 style="position:absolute; color:white; font-family:Arial; margin-left:750px;" >Dashboard</h1>
+             <div style="float:right">
+            <asp:ImageButton ImageUrl="~/images/imagesAutres/user.png" runat="server" Width="50px" OnClick="Unnamed1_Click" />
+                </div>
     </div>
 
-      <div  style="background-color:#F0F0F0; margin-left:300px; margin-top:200px; font-family:Arial">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Style="margin-left: 0px; background-color: #F0F0F0; font-size: 32px; border-radius:10px;" DataKeyNames="Id" onselectedindexchanged="GridView1_SelectedIndexChanged" BorderColor="#F0F0F0" CellSpacing="30">
+      <div  style="background-color:#F0F0F0; margin-left:300px; margin-top:100px; font-family:Arial">
+              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Style="margin-left: 0px; background-color: #F0F0F0; font-size: 32px; border-radius:10px;" DataKeyNames="Id" onselectedindexchanged="GridView1_SelectedIndexChanged" BorderColor="#F0F0F0" CellSpacing="30">
             <Columns>
 
                  <asp:TemplateField>
@@ -43,13 +46,7 @@
 
               
 
-                   <asp:TemplateField>
-                    <ItemTemplate>
-                    <asp:ImageButton ImageUrl="~/images/imagesAutres/EYE.PNG" runat="server"  CausesValidation="false" CommandArgument='<%# Container.DataItemIndex %>'  
-                    CommandName="Select"  OnClick="ViewHouse" BorderColor="Red" BackColor="#F0F0F0" ForeColor="#4CAF50" Height="70" Width="100"/>
-                      
-                    </ItemTemplate>
-                </asp:TemplateField>
+               
 
                
             </Columns> 
@@ -84,8 +81,8 @@
     <%      if (displayMessageBookingGood == true)
         {  %>
 
-            <div style="background-color:green; width:300px; height:50px; float:right;">
-            <p style="font-family:Arial; font-size:20px; color:white; text-align:center;">Booking is good</p>
+            <div style="background-color:#0c7a2e; width:300px; height:50px; float:right; margin-top:-200px; z-index:-4;">
+            <p style="font-family:Arial; font-size:20px; color:white; text-align:center;">Booked</p>
 
                 </div>
 <%  } %>  
@@ -102,20 +99,42 @@
          
   
     
-     <asp:Calendar ID = "Calendar1" runat = "server" SelectionMode="DayWeekMonth" onselectionchanged="Calendar1_SelectionChanged">
-</asp:Calendar>
+            <asp:Calendar ID="Calendar1" runat="server" SelectionMode="DayWeekMonth" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+                <DayHeaderStyle Font-Bold="True" Font-Size="8pt"></DayHeaderStyle>
+
+                <NextPrevStyle VerticalAlign="Bottom" Font-Bold="True" Font-Size="8pt" ForeColor="#333333"></NextPrevStyle>
+
+                <OtherMonthDayStyle ForeColor="#999999"></OtherMonthDayStyle>
+
+                <SelectedDayStyle BackColor="#333399" ForeColor="White"></SelectedDayStyle>
+
+                <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399"></TitleStyle>
+
+                <TodayDayStyle BackColor="#CCCCCC"></TodayDayStyle>
+            </asp:Calendar>
 
        
        
            
   
 
-     <div style="margin-top:-230px; margin-left:700px;">
+     <div style="margin-top:-255px; margin-left:700px;">
            <p style="font-family:Arial; font-size:20px;">End date: 
             <asp:Label ID="bookingDate2" runat="server"></asp:Label>
          </p>
-     <asp:Calendar ID = "Calendar2" runat = "server" SelectionMode="DayWeekMonth" onselectionchanged="Calendar2_SelectionChanged">
-</asp:Calendar>
+         <asp:Calendar ID="Calendar2" runat="server" SelectionMode="DayWeekMonth" OnSelectionChanged="Calendar2_SelectionChanged" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+             <DayHeaderStyle Font-Bold="True" Font-Size="8pt"></DayHeaderStyle>
+
+             <NextPrevStyle VerticalAlign="Bottom" Font-Bold="True" Font-Size="8pt" ForeColor="#333333"></NextPrevStyle>
+
+             <OtherMonthDayStyle ForeColor="#999999"></OtherMonthDayStyle>
+
+             <SelectedDayStyle BackColor="#333399" ForeColor="White"></SelectedDayStyle>
+
+             <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399"></TitleStyle>
+
+             <TodayDayStyle BackColor="#CCCCCC"></TodayDayStyle>
+         </asp:Calendar>
         </div>
 
             </div>

@@ -75,6 +75,11 @@ public partial class Connected_MyHouses : System.Web.UI.Page
         // Close the connection to the database
         con.Close();
 
-        // Response.Redirect("~/Connected/HomeConnected.aspx");
+        Response.AppendHeader("Refresh", "2;url=MyHouses.aspx");
+    }
+
+    protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Profil.aspx");
     }
 }
